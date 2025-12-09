@@ -375,15 +375,15 @@ button:hover {
   }
 
   /*.........................images of hotels.............*/
-  .card-image {
+.card-image {
     grid-area: image;
-    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100% ), url("jp.jpeg");
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100% ), url("assets/jp.jpeg");
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
   }
 
-    .img1 { background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100% ), url("jp.jpeg"); }
+    .img1 { background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100% ), url("assets/jp.jpeg"); }
     .img2 { background-image: url("assets/jp2.jpeg"); }
     .img3 { background-image: url("assets/jp3.jpeg"); }
 
