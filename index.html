@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JPreserve — Login/Register</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Firebase SDKs -->
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+
+  <!-- Background Decorations (Mascot + Hotel Theme) -->
+  <div class="bg-mascot broom"></div>
+  <div class="bg-mascot bed"></div>
+  <div class="bg-mascot ac"></div>
+
+  <div class="container">
+
+    <!-- Auth Card -->
+    <div class="card glass" id="authCard">
+      <h2 id="formTitle">Login</h2>
+
+      <!-- Login Form -->
+      <div id="loginForm" class="form active">
+        <input id="loginEmail" type="email" placeholder="Email">
+        <input id="loginPassword" type="password" placeholder="Password">
+        <button id="loginBtn" class="mainBtn">Login</button>
+        <button id="showRegister" class="linkBtn">Create Account</button>
+      </div>
+
+      <!-- Register Form -->
+      <div id="registerForm" class="form">
+        <input id="regName" type="text" placeholder="Your Name">
+        <input id="regEmail" type="email" placeholder="Email">
+        <input id="regPassword" type="password" placeholder="Password">
+        <button id="registerBtn" class="mainBtn">Register</button>
+        <button id="showLogin" class="linkBtn">Back to Login</button>
+      </div>
+    </div>
+
+    <!-- Dashboard -->
+    <!-- Add this inside your container after the authCard -
+<div class="card glass" id="dashboard" style="display:none;">
+    <div class="userInfo">
+      <h3 id="displayName"></h3>
+      <p id="displayEmail"></p>
+      <p id="displayRole"></p>
+    </div>
+  
+    <div id="hotelsContainer">
+      Hotels and rooms will be rendered here dynamically 
+    </div>
+  
+    <button id="logoutBtn" class="logoutBtn">Logout</button>
+  </div>
+-->
+  </div>
+
+</body>
+</html>

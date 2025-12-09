@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JPreserve — Dashboard</title>
+
+    <!-- Font Awesome for profile icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="dashboard.js"></script>
+</head>
+
+<body>
+    <!-- Floating Profile Menu -->
+    <div class="profile-menu">
+        <button id="profileIcon" class="profile-btn" aria-label="Profile">
+            <i class="fa-solid fa-user"></i>
+        </button>
+
+        <div class="profile-dropdown" id="profileDropdown" aria-hidden="true">
+            <div class="pd-info">
+                <div id="ddName" class="pd-name">Loading…</div>
+                <div id="ddEmail" class="pd-email"></div>
+            </div>
+            <div class="pd-actions">
+                <button id="ddLogout" class="btn-logout">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page header 
+  <header class="dash-header">
+    <h1>JPreserve — Assigned Guest Houses</h1>
+    <p class="subtitle">Hover a card and move the cursor — the card will tilt and glow.</p>
+  </header>-->
+
+    <!-- Cards Container -->
+    <div id="hotelsContainer">
+
+        <!-- CARD 1 -->
+        <div class="cards rgb" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-id="1">
+            <div class="card-image"></div>
+            <div class="card-image img1" ></div>
+            <div class="card-text">
+                <span class="date">1 week</span>
+                <p>JPreserve 1</p>
+            </div>
+            <div class="card-stats"></div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="cards rgb" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-id="2">
+            <div class="card-image"></div>
+            <div class="card-image img2"></div>
+            <div class="card-text">
+                <span class="date">1 week</span>
+                <p>JPreserve 2</p>
+            </div>
+            <div class="card-stats"></div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="cards rgb" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-id="3">
+            <div class="card-image"></div>
+            <div class="card-image img3"></div>
+            <div class="card-text">
+                <span class="date">1 week</span>
+                <p>JPreserve 3</p>
+            </div>
+            <div class="card-stats"></div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="cards rgb" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-id="4">
+            <div class="card-image"></div>
+            <div class="card-image img4"></div>
+            <div class="card-text">
+                <span class="date">1 week</span>
+                <p>JPreserve 4</p>
+            </div>
+            <div class="card-stats"></div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="cards rgb" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-id="5">
+            <div class="card-image"></div>
+            <div class="card-image img5"></div>
+            <div class="card-text">
+                <span class="date">1 week</span>
+                <p>JPreserve 5</p>
+            </div>
+            <div class="card-stats"></div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="cards rgb" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-id="6">
+            <div class="card-image"></div>
+            <div class="card-image img6"></div>
+            <div class="card-text">
+                <span class="date">1 week</span>
+                <p>JPreserve 6</p>
+            </div>
+            <div class="card-stats"></div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="cards rgb" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-id="7">
+            <div class="card-image"></div>
+            <div class="card-image img7"></div>
+            <div class="card-text">
+                <span class="date">1 week</span>
+                <p>JPreserve 7</p>
+            </div>
+            <div class="card-stats"></div>
+        </div>
+
+    </div>
+
+
+
+    <!-- small helper for no data -->
+    <template id="no-hotels-template">
+        <div class="no-hotels">No guest houses assigned yet.</div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script>
+          /* Smooth Horizontal Scroll */
+        const container = document.getElementById("hotelsContainer");
+
+        container.addEventListener("mousemove", (e) => {
+            const rect = container.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const percent = mouseX / rect.width;
+
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            container.scrollLeft = maxScroll * percent;
+        });
+
+         /* Clicking a card → Go to rooms.html */
+         document.querySelectorAll(".cards").forEach(card => {
+            card.addEventListener("click", () => {
+                const id = card.getAttribute("data-id");
+                window.location.href = `rooms.html?hotel=${id}`;
+            });
+        });
+
+    </script>
+</body>
+
+</html>

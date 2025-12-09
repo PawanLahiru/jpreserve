@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="room-detail.css">
+</head>
+<body>
+
+<div class="room-container">
+    <img id="roomImage" class="room-image-large">
+    <div class="progress-circle">
+        <svg>
+            <circle cx="60" cy="60" r="54" class="bg"></circle>
+            <circle cx="60" cy="60" r="54" class="progress" id="progressCircle"></circle>
+        </svg>
+        <div class="progress-time" id="progressTime">00:00</div>
+    </div>
+
+    <h1 id="roomTitle"></h1>
+    <p id="roomType"></p>
+
+    <div class="status-box">
+        Cleaning Status: <span id="cleanStatus" >Unknown</span>
+    </div>
+
+    <div class="timer-box">
+        Timer: <span id="timer">00:00:00</span>
+    </div>
+
+    <p class="staff-name">Staff: <span id="staffName">Not Started</span></p>
+
+    <button id="startBtn" class="btn start">Start Cleaning</button>
+    <button id="finishBtn" class="btn finish">Finish Cleaning</button>
+
+    <button id="viewHistory" class="btn history">View History</button>
+
+    <div id="historyList" class="history-box"></div>
+
+</div>
+
+<script src="room-detail.js"></script>
+
+</body>
+</html>
