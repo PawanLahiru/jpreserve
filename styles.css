@@ -375,7 +375,7 @@ button:hover {
   }
 
   /*.........................images of hotels.............*/
-.card-image {
+  .card-image {
     grid-area: image;
     background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100% ), url("assets/jp.jpeg");
     border-top-left-radius: 15px;
@@ -396,13 +396,14 @@ button:hover {
 
   .card-text .date {
     color: rgb(255, 7, 110);
-    font-size: 13px;
+    font-size: 23px;
   }
 
   .card-text p {
     color: grey;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 300;
+    margin-top: 15px;
   }
 
   .card-text h2 {
