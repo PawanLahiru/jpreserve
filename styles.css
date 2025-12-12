@@ -383,9 +383,11 @@ button:hover {
     background-size: cover;
   }
 
-    .img1 { background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100% ), url("assets/jp.jpeg"); }
-    .img2 { background-image: url("assets/jp2.jpeg"); }
-    .img3 { background-image: url("assets/jp3.jpeg"); }
+    .img1 { background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100% ), url("assets/izutzu.jpg"); }
+    .img2 { background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100% ), url("assets/gakurin.jpg"); }
+    .img3 { background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100% ), url("assets/Mongakucho.jpg"); }
+    .img4 { background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100% ), url("assets/Shinmachi\ Gojo.jpg"); }
+    .img3 { background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100% ), url("assets/Mongakucho.jpg"); }
 
 
   .card-text {
